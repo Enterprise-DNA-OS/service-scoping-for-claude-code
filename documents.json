@@ -1,11 +1,57 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
-    "file": "name",
+    "name": "statement-of-work",
+    "title": "DRAFT: service statement of work",
+    "for_each": "select id,code from scopes order by code",
+    "file": "code",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Estimate details",
+        "layout": "record",
+        "note": "Draft estimate for review. No customer acceptance or dispatch is recorded.",
+        "sql": "select code,name,client,status,revision,currency,due,tax_note,exclusions from scope_totals where id=$1"
+      },
+      {
+        "title": "Work and acceptance",
+        "sql": "select name,phase,resource,total_hours,description,acceptance,total_sell_cents from line_costs where scope_id=$1 order by phase,code"
+      },
+      {
+        "title": "Service wording",
+        "sql": "select i.name as service,entry.key as field,entry.value as wording from scope_items i cross join lateral jsonb_each_text(i.language) entry where i.scope_id=$1 and trim(entry.value)<>'' order by i.code,entry.key"
+      },
+      {
+        "title": "Estimate total",
+        "sql": "select currency,revenue_cents,unpriced from scope_totals where id=$1"
+      },
+      {
+        "title": "Assumptions",
+        "sql": "select name,owner,due,resolved_on,evidence from assumptions where scope_id=$1 order by code"
+      }
+    ]
+  },
+  {
+    "name": "delivery-handover",
+    "title": "DRAFT: internal delivery handover",
+    "for_each": "select id,code from scopes order by code",
+    "file": "code",
+    "sections": [
+      {
+        "title": "Scope and review state",
+        "layout": "record",
+        "sql": "select code,name,client,owner,status,revision,due,currency,hours,cost_cents,revenue_cents,margin_percent from margin_board where id=$1"
+      },
+      {
+        "title": "Work breakdown and estimate basis",
+        "sql": "select name,phase,resource,total_hours,acceptance,evidence from line_costs where scope_id=$1 order by phase,code"
+      },
+      {
+        "title": "Open assumptions",
+        "sql": "select name,owner,due from assumptions where scope_id=$1 and resolved_on is null"
+      },
+      {
+        "title": "Revision approvals",
+        "sql": "select sub.revision,ap.kind,ap.actor,ap.evidence,ap.exception_reason from submissions sub join approvals ap on ap.submission_id=sub.id where sub.scope_id=$1 order by sub.revision,ap.kind"
+      }
     ]
   }
 ]

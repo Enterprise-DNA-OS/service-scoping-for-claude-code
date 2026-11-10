@@ -1,0 +1,42 @@
+[
+  [
+    "Which scopes look priced but still have missing cost rates?",
+    "margin-watch"
+  ],
+  [
+    "Which overdue estimates also have unresolved client assumptions?",
+    "attention"
+  ],
+  [
+    "How much margin remains after two extra delivery hours?",
+    "scenario Q-102 --extra-hours=2 --cost-cents=11000"
+  ],
+  [
+    "Which labour lines have drifted from their catalogue standard?",
+    "catalogue-drift"
+  ],
+  [
+    "Which submitted revision still lacks a commercial reviewer?",
+    "approvals-due"
+  ],
+  [
+    "Which service rates have not been reviewed for 90 days?",
+    "rates-review"
+  ],
+  [
+    "How much delivery effort sits in each role and phase?",
+    "effort-by-role"
+  ],
+  [
+    "Which estimate lines lack an acceptance criterion or evidence?",
+    "compliance"
+  ],
+  [
+    "Who approved the previous scope revision and on what evidence?",
+    "history Q-101"
+  ],
+  [
+    "Which client contacts need a retention-purpose review?",
+    "compliance"
+  ]
+]

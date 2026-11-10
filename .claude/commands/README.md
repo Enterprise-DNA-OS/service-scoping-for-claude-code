@@ -1,5 +1,39 @@
-# Slash commands
+# Service scoping commands
 
-One file per recurring job. Each command tells Claude Code exactly which CLI command to run and how to present the result, so the operator never re-explains the job.
-
-Add a command every time the same ask comes twice. Frontmatter needs a `description:` line. The body is the brief.
+- `/clients`: Review client contacts and retention review dates.
+- `/services`: Review the service catalogue and hourly rates.
+- `/scopes`: Review the current scope pipeline.
+- `/attention`: Read overdue scopes, unresolved assumptions and incomplete estimates.
+- `/margin-watch`: Compare priced scope margins and unpriced work.
+- `/assumptions-due`: Review scope dependencies and their owners.
+- `/approvals-due`: Find submitted scopes still waiting for reviewers.
+- `/catalogue-drift`: Find estimate lines that differ from current service standards.
+- `/rates-review`: Find unpriced services and rate reviews older than 90 days.
+- `/effort-by-role`: Review labour by scope, phase and resource.
+- `/compliance`: Check selected pricing-record and privacy-review conditions.
+- `/activity`: Read recent changes and operator labels.
+- `/stats`: Count work by currency and stage.
+- `/scope`: Read one scope and every estimate line.
+- `/history`: Read the immutable submission and approval history.
+- `/scenario`: Test extra delivery effort against the current estimate.
+- `/add-client`: Record a client and a contact-retention purpose.
+- `/review-client`: Record the next contact-retention review.
+- `/add-service`: Create a reusable professional service.
+- `/set-rate`: Review and activate a service with cost and sell rates.
+- `/create-scope`: Start a client-specific labour estimate.
+- `/add-line`: Copy a service and its subservices into a draft estimate.
+- `/set-line`: Change draft effort, rates, evidence or acceptance criteria.
+- `/add-assumption`: Record a dependency that must be resolved.
+- `/resolve-assumption`: Record evidence that resolves a dependency.
+- `/submit`: Freeze the current revision for review.
+- `/approve`: Record technical or commercial sign-off.
+- `/revise`: Open a new draft revision while retaining prior approvals.
+- `/close`: Record the approved scope handover.
+- `/log`: Append a scope note.
+- `/draft-sow`: Draft a statement of work without sending it.
+- `/weekly-review`: Draft the Monday review from three live reads.
+- `/import`: Import native ScopeStack professional-service CSV rows.
+- `/export`: Write a full private administrative snapshot.
+- `/help`: List the CLI verbs.
+- `/customise`: change the domain with a migration and meaningful tests.
+- `/new-view`: add a private read-only report.

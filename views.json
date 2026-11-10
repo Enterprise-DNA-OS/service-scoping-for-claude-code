@@ -1,13 +1,40 @@
 [
   {
     "name": "week",
-    "title": "This week",
-    "subtitle": "Service Scoping for Claude Code: what needs attention, rendered by npm run view",
+    "title": "Weekly service scoping",
     "sections": [
       {
-        "title": "Needs attention",
-        "note": "TODO(author): point this at the industry's attention view (overdue, stuck, quiet).",
-        "sql": "select 'replace me' as item, 'TODO(author)' as why"
+        "title": "Exceptions",
+        "sql": "select * from attention order by due,reference"
+      },
+      {
+        "title": "Awaiting approval",
+        "sql": "select code,name,revision,signoffs,due from scope_totals where status='pending'"
+      }
+    ]
+  },
+  {
+    "name": "margin",
+    "title": "Labour estimate review",
+    "sections": [
+      {
+        "title": "Margins by scope",
+        "sql": "select code,name,currency,hours,cost_cents,revenue_cents,margin_percent,unpriced from margin_board order by code"
+      },
+      {
+        "title": "Catalogue review",
+        "sql": "select code,name,reviewed_on,state from services where reviewed_on is null or reviewed_on<current_date-90"
+      }
+    ]
+  },
+  {
+    "name": "compliance",
+    "title": "Scoping record checks",
+    "sections": [
+      {
+        "title": "Review findings",
+        "note": "Record checks only. An operator reviews the business context and applicable rules.",
+        "sql": "select * from compliance_findings order by reference,rule"
       }
     ]
   }

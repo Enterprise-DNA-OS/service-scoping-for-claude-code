@@ -1,0 +1,3 @@
+Line of Business,Service Category,Service,Subservice,Phase,Resource,Suggested Hours,State,Service Type,Billing Frequency,Service Description,Deliverables,Exclusions
+Infrastructure,Network,Network refresh,,Discover,Consultant,3,Active,Professional,One Time,"Discovery, design and review",Design brief,Cabling excluded
+Infrastructure,Network,Network refresh,Validate switch configuration,Validate,Engineer,5,Active,Professional,One Time,Test the agreed design,Test results,Cabling excluded

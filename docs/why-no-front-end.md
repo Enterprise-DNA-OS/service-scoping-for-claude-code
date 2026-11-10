@@ -1,24 +1,11 @@
 # Why there is no front end
 
-ScopeStack is a database with a subscription. The tables underneath it are ordinary: a few entities, a few relationships, a handful of workflows you repeat every week. What you pay for is the layer on top that lets people who do not write SQL get at those tables. Screens, filters, dashboards, forms.
+An estimator can ask for the service catalogue, change an estimate and review the approval history through a coding agent. The database keeps the records and the CLI applies the workflow. A private HTML snapshot supplies a readable weekly report.
 
-That layer used to be the whole product, because talking to a database was hard. It is not hard any more. Open this folder in Claude Code, describe what you want, and it writes the query, runs it, and explains the answer. Ask a question the dashboard never had a chart for and you still get an answer.
+ScopeStack includes collaborative screens and document workflows. This base covers professional-service labour estimates and review evidence. It does not reproduce its entire product. There is no mobile app, drag-and-drop editor, live collaborative editing, offline synchronisation, e-signature or email sender. The embedded database supports one local process at a time. Shared Postgres needs access-control design.
 
-## What you gain
+A screen is useful for people working visually all day. This base fits an estimator who prefers describing the change and checking the result. Enterprise DNA can build the interface and connections your team needs. The CLI and data model remain useful on their own.
 
-- **Better answers.** A dashboard shows what the vendor decided to chart. Here you ask your own question, in your own words, and get it answered against your own data.
-- **No seats.** Everyone who needs to look can look. The bill does not grow with headcount.
-- **Your data in your Postgres.** Plain tables. Back them up, query them from anything, leave any time. There is no export step because there is nothing to leave.
-- **A process that matches you.** When your way of working changes, you add a command. You do not wait for a feature request to clear.
+Use Claude Code, Codex, OpenCode or Cursor. Read AGENTS.md and CLAUDE.md. Agent subscriptions and hosting are separate operating costs. The MIT code has no licence fee. ScopeStack's current credit pricing also includes unlimited users, so this is not a claim that its bill grows per seat.
 
-## What you give up
-
-- **A visual board.** Stages are a table you ask about, not cards you drag.
-- **A phone app.** It runs where Claude Code runs.
-- **A vendor help desk.** This is open source. Enterprise DNA supports the installed version for businesses that want someone to call.
-
-## Who this fits
-
-Small teams who already use Claude Code, or who would rather learn to ask than learn another interface. If your team needs a screen to look at all day, keep ScopeStack. If you need the answers more than the screens, this is cheaper, faster and yours.
-
-Installed and run for you: https://enterprisedna.co/omni/instead-of/scopestack
+[Omni by Enterprise DNA](https://enterprisedna.co/omni/instead-of/scopestack) installs, customises and runs the system.
