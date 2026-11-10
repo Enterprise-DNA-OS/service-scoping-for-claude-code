@@ -8,7 +8,7 @@ Built by [Enterprise DNA](https://enterprisedna.co). MIT licensed. Runs with Cla
 | Do it yourself | We customise it | We run it for you |
 |---|---|---|
 | Free base. Clone, install and run it. | Your services, rates and approval rules. Your ScopeStack data mapped and brought across. | Installed, connected and operated through Omni by Enterprise DNA. Setup fee, then a retainer. |
-| [Quick start](#quick-start) | [Book a call](https://enterprisedna.co/omni/book/?offer=replace-software&utm_campaign=scopestack&utm_source=github&utm_medium=readme) | [How it works](https://enterprisedna.co/omni/instead-of/scopestack) |
+| [Quick start](#quick-start) | [Book a call](https://enterprisedna.co/omni/book/?offer=replace-software&utm_campaign=scopestack&utm_source=github&utm_medium=readme) | [How it works](https://enterprisedna.co/omni/instead-of/scopestack?utm_source=github&utm_medium=readme&utm_campaign=scopestack) |
 
 ## What this holds
 
